@@ -1,0 +1,37 @@
+@import 'color';
+body{
+    background-color:$secondary;
+    font-size:$fontSize;
+}
+
+.head{
+    color:$secondary;
+}
+
+nav{
+    ul{margin:0;padding:0;list-style: none;}
+    li{display:inline-block;}
+    a{display:block;
+    padding:6px 12px;
+text-decoration:none}
+}
+
+@mixin textHighlight{
+    color:red;
+    background-color:grey;
+    font-size:15px;
+}
+@mixin borderColor($color,$width){
+    border: $width solid $color;
+
+}
+.para{
+    @include textHighlight;
+    @include borderColor(blue,2px);
+    text-transform: capitalize;
+}
+
+.p1{
+    @include borderColor(green,5px);
+}
+
